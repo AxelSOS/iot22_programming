@@ -16,3 +16,7 @@ print(my_add(24, 0))
 say_hello()
 say_hello()
 say_hello()
+
+
+# Måste man definiera alla funktioner högst upp?
+# Kan man anropa funktioner i andra funktioner?
