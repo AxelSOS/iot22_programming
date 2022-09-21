@@ -64,26 +64,44 @@ print(some_fruits)
 
 # zip() låter oss loopa över flera listor samtidigt
 
-fruits = ["apple", "orange", "pear", "banana"]
-prices = [24, 20, 15, 39]
+#fruits = ["apple", "orange", "pear", "banana"]
+#prices = [24, 20, 15, 39]
 
 # fruit: apple, price: 24 kr
 # fruit: orange, price: 20 kr
 # fruit: pear, price: 15 kr
 # fruit: banana, price: 39 kr
 
-for fruit, price in zip(fruits, prices):
-    print("fruit:", fruit, ", price:", price)
+#for fruit, price in zip(fruits, prices):
+    #print("fruit:", fruit, ", price:", price)
 
 #print("pineapple" not in fruits)
 
 
+####
+"""
+# While keep_going-mönstret
+
+keep_going = True
+
+while keep_going:
+    # logik här...
+    
+    # Ta emot text från användaren
+    user_command = input("Command: ").lower()
+    
+    # Check for exit command
+    if user_command == "exit":
+        keep_going = False
+        
+    elif user_command == "play":
+        pass
+"""
 
 
-
-
-
-
-
-
-
+# Avbryta en loop innan allt är klart
+for num in range(10):
+    if num == 7:
+        break
+    
+    print(num)
