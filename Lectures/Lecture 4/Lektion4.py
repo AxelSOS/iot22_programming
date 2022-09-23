@@ -1,3 +1,4 @@
+
 ####
 # Default-argument
 ####
@@ -120,6 +121,7 @@ print_all_args(arg1="Adam", arg2=11, arg3=4.4)
 
 ####
 # Dictionaries
+####
 
 postnummer = {
     'guldheden': 41323,
@@ -145,3 +147,56 @@ print()
 
 for stad, kod in postnummer.items():
     print(f'{stad} = {kod}')
+
+
+# Exempel: Låt användaren ange information, spara i en dict
+name = input('Ange ditt namn: ')
+age = int(input('Ange din ålder: '))
+
+person = {
+    'name': name,
+    'age': age
+    }
+
+####
+# Set
+####
+
+# Två sätt att skapa set
+set1 = set([1, 2, 3])
+set2 = {3, 4, 5}
+
+# Lägg till och ta bort
+set1.add(4)
+print(set1)
+
+set1.remove(4)
+print(set1)
+
+# Olika operationer
+print("Union:", set1.union(set2))
+
+print("Intersection:", set1.intersection(set2))
+
+print("Difference between 1 and 2:", set1.difference(set2))
+print("Difference between 2 and 1:", set2.difference(set1))
+
+
+####
+# Pretty-print
+####
+
+postnummer = {
+    'guldheden': 41323,
+    'säve': 21746,
+    'landvetter': 43350,
+    'malmö': [1, 2, 3],
+    #'lund': 12345,
+    #'landskrona': 43115
+    }
+
+print(postnummer)  # Inte så snyggt
+
+import pprint
+
+pprint.pprint(postnummer, width=60)
