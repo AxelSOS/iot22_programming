@@ -1,4 +1,3 @@
-
 ####
 # Default-argument
 ####
@@ -200,3 +199,27 @@ print(postnummer)  # Inte så snyggt
 import pprint
 
 pprint.pprint(postnummer, width=60)
+
+
+####
+# Rekursion
+####
+
+# Skriv en funktion
+#  - Tar in en siffra (n)
+#  - Tar in en text (text)
+#  - Skriv ut texten "text" "n" gånger
+def print_times(n, text):
+    if n == 0:  # Basfall
+        return
+    else:
+        print(text)
+        print_times(n-1, text)
+
+
+print_times(5, "Hej")
+# Hej
+# Hej
+# Hej
+# Hej
+# Hej
