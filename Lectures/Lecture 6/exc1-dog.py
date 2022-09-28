@@ -11,8 +11,12 @@ class Dog:
         print(f"{self.name} skäller: {self.sound} {self.sound}")
     
     def age_in_dog_years(self):
-        return self.age * 7
+        return Dog.human_to_dog_years(self.age)
     
+    @staticmethod
+    def human_to_dog_years(years):
+        return years * 7
+
 
 if __name__ == '__main__':
     dog1 = Dog(name='Rufus', age=3,
@@ -24,4 +28,6 @@ if __name__ == '__main__':
     
     print(dog1.age_in_dog_years())
     print(dog2.age_in_dog_years())
+    
+    print(Dog.human_to_dog_years(dog1.age))
     
