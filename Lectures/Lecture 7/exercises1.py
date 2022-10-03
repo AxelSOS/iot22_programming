@@ -1,3 +1,28 @@
+my_list = [1, 25, 0, -2, -7, 14]
+
+# [-2, -7]
+new_list = [ num for num in my_list if num < 0 ]
+print(new_list)
+
+def get_divisible_list(in_list, dividend):
+    # för varje tal i listan, kolla är talet jämt delbart med "dividend"
+    # om det är det, lägg till talet på en ny lista
+    
+    div_list = [ num for num in in_list if num % dividend == 0 ]
+    return div_list
+
+
+#3. Gör en funktion som returnerar:
+# En lista (med list comprehensions) som innehåller alla ord längre än 5 tecken
+
+#           .             .             .
+my_str = "Detta är några tecken i en sträng"
+
+def longer_than_five(my_string):
+    return [ word for word in my_string.split() if len(word) > 5 ]
+
+print(longer_than_five(my_str))
+
 """
 
 1. Givet listan: [1, 25, 0, -2, -7, 14]
