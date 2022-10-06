@@ -14,7 +14,22 @@ while True:
         print(f"  IndexError: {ie}")
     except ValueError as ve:
         print(f"  ValueError: {ve}")
-   
+    except Exception:
+        print("  Oops! Unhandled exception! Email this to the programmer!")
+        raise
+    finally:
+        # Nyttigt för att stänga filer
+        # Avsluta anslutningar 
+        print("This code is always run, even after exceptions..")
+"""
+
+Traceback (most recent call last):
+  File "D:\Dev\iot22_programming\Lectures\Lecture 8\exercise1.py", line 12, in <module>
+    print(f"Element at index {index} is: {my_list[index]}")
+IndexError: list index out of range
+
+"""
+
 """
 # Låt användaren välja ett element ur listan
 while True:
