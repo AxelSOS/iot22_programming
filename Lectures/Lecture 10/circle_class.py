@@ -1,22 +1,37 @@
 import math
 
+
+MAX_RADIUS = 100
+
+
 class NegativeRadiusError(ValueError):
     """Raised when the input is negative"""
-    
+
+
 class RadiusTooBigError(ValueError):
     """Raised when radius is too big"""
 
+
 class Circle:
+    """Class to handle creation and math with circles
+
+    More text here...
+
+    """
     def __init__(self, radius):
+        # Don't Repeat Yourself:
+        # Lägg felhanteringen centralt istället, så slipper vi skriva den i varje metod: area, diameter osv.
+        
+        if radius < 0:
+            raise NegativeRadiusError('can only use "non-negative" radius')
+        
+        if radius > MAX_RADIUS:
+            raise RadiusTooBigError("radius 'needs' to be smaller than", MAX_RADIUS)
+        
         self.radius = radius
         
-    def area(self):
-        if self.radius < 0:
-            raise NegativeRadiusError("can only use non-negative radius")
-        
-        if self.radius > 100:
-            raise RadiusTooBigError("radius needs to be smaller than 100.")
-    
+    def area(self):    
+        # Calculate the area of the circle
         return math.pi * self.radius ** 2
     
     def diameter(self):

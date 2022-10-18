@@ -1,7 +1,7 @@
 import circle_class
-import math
 
 import pytest  # Låter oss använda parameterisering
+
 
 # Testa att skapa en instans av klassen
 def test_create_circle():
@@ -20,3 +20,7 @@ def test_create_circle():
 def test_diameter(test_input, expected_output):
     c = circle_class.Circle(test_input)
     assert c.diameter() == expected_output, "Diameter didn't match!"  # Felmeddelande
+
+
+if __name__ == '__main__':
+    pytest.main()
