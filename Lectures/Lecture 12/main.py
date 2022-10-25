@@ -1,6 +1,11 @@
 import sys
 import argparse
 
+# För att importera från under-kataloger: "Paket"
+# from shapes import circle
+# from shapes.circle import diameter
+# from shapes.pointy import star
+
 
 def multi_divide(a, b, c):
     return a / b / c
@@ -80,7 +85,7 @@ if __name__ == '__main__':
     # print(multi_divide(10, 5, 2))
     # print(multi_divide(10, 5, 0))
 
-    # main()
+    # main_sys_argv()
 
     # sum_all_arguments()
 
